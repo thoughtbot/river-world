@@ -10,8 +10,5 @@ user = FactoryBot.create(:user, display_name: "foo")
 user_streams = FactoryBot.create_list(:user_stream, 10, user: user)
 user_streams.each do |user_stream|
   stream = user_stream.stream
-  messages = FactoryBot.create_list(:message, 10)
-  messages.each do |message|
-    FactoryBot.create(:stream_message, stream: stream, message: message)
-  end
+  messages = FactoryBot.create_list(:message, 10, stream: stream )
 end

@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 2020_12_11_161733) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "stream_id", null: false
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["stream_id"], name: "index_messages_on_stream_id"
   end
 
   create_table "stream_messages", force: :cascade do |t|
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_161733) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "messages", "users"
+  add_foreign_key "messages", "streams"
   add_foreign_key "stream_messages", "messages"
   add_foreign_key "stream_messages", "streams"
   add_foreign_key "user_streams", "streams"

@@ -1,8 +1,8 @@
 <div class="row border-bottom p-1">
   <div class="col col-lg-2">
-    <p>#<%=stream_name%></p>
-    <p><strong><%=message.user.display_name%></strong></p>
-    <p><small><%=message.created_at.strftime("%D %T") %></small></p>
+    <p># <%= message.stream.name %></p>
+    <p><strong><%= message.user.display_name%></strong></p>
+    <p><small><%= message.created_at.strftime("%D %T") %></small></p>
   </div>
   <div class="col-8">
     <p class="lead"><%= message.body %></p>

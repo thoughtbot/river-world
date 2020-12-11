@@ -5,7 +5,6 @@ FactoryBot.define do
   end
 
   factory :message do
-    user
     sequence(:body) { |n| "Message number #{n}" }
   end
 
