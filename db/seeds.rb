@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-user = FactoryBot.create(:user, display_name: "foo")
-user_streams = FactoryBot.create_list(:user_stream, 10, user: user)
-user_streams.each do |user_stream|
-  stream = user_stream.stream
-  messages = FactoryBot.create_list(:message, 10, stream: stream )
+FactoryBot.create(:user, display_name: "foo")
+# user_streams = FactoryBot.create_list(:user_stream, 10, user: user)
+10.times do |time|
+  stream = FactoryBot.create(:stream)
+  FactoryBot.create_list(:message, 3, user: FactoryBot.create(:user), stream: stream)
 end

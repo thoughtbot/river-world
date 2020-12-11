@@ -9,11 +9,11 @@
         <%= link_to '+', user_streams_path(stream_id: stream), class: "btn btn-primary stretched-link", id: "#{stream.id}", method: :post%>
       </li>
     <% end %>
-      
+
 
     </ul>
   </div>
   <div class="col stream">
-    <%= render partial: 'messages/message', collection: @user.messages %>
+    <%= render partial: 'messages/message', collection: @stream_messages %>
   </div>
 </div>
