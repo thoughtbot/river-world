@@ -7,10 +7,10 @@ end
 
 ruby "2.6.6"
 
-
 gem "autoprefixer-rails"
 
 gem "bootsnap", require: false
+gem "bootstrap"
 gem "honeybadger"
 gem "pg"
 gem "puma"
@@ -44,25 +44,25 @@ end
 
 gem "suspenders", group: [:development, :test]
 
-gem 'rack-mini-profiler', require: false
-gem 'oj'
-gem 'high_voltage'
-gem 'bourbon', '>= 6.0.0'
-gem 'spring-commands-rspec', group: :development
-gem 'rspec-rails', '~> 3.6', group: [:development, :test]
-gem 'shoulda-matchers', group: :test
-gem 'simplecov', require: false, group: [:test]
-gem 'webdrivers', group: :test
-gem 'simple_form'
-gem 'bullet', group: [:development, :test]
-gem 'factory_bot_rails', group: [:development, :test]
-gem 'standard', group: :development
-gem 'delayed_job_active_record'
-gem 'inline_svg'
-gem 'bundler-audit', '>= 0.7.0', require: false, group: [:development, :test]
+gem "rack-mini-profiler", require: false
+gem "oj"
+gem "high_voltage"
+gem "bourbon", ">= 6.0.0"
+gem "spring-commands-rspec", group: :development
+gem "rspec-rails", "~> 3.6", group: [:development, :test]
+gem "shoulda-matchers", group: :test
+gem "simplecov", require: false, group: [:test]
+gem "webdrivers", group: :test
+gem "simple_form"
+gem "bullet", group: [:development, :test]
+gem "factory_bot_rails", group: [:development, :test]
+gem "standard", group: :development
+gem "delayed_job_active_record"
+gem "inline_svg"
+gem "bundler-audit", ">= 0.7.0", require: false, group: [:development, :test]
 group :development do
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
 end
 
-gem 'rack-timeout', group: :production
+gem "rack-timeout", group: :production

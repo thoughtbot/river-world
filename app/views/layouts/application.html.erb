@@ -14,7 +14,9 @@
 </head>
 <body>
   <%= render "flashes" -%>
-  <%= yield %>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
   <%= render "javascript" %>
   <%= render "css_overrides" %>
 </body>

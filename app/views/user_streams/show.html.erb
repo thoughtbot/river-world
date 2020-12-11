@@ -1,8 +1,12 @@
-<div>
-  <div>
-    Chat options here
+<div class="row">
+  <div class="col col-lg-2 side-panel p-0 bg-light bg-gradient">
+    <ul class="list-group">
+      <li class="list-group-item"><%=@stream.name%></li>
+      <li class="list-group-item"><%=@user.display_name%></li>
+      <li class="list-group-item disabled">Chat options</li>
+    </ul>
   </div>
-  <div>
-    This is the stream
+  <div class="col stream">
+    <%= render partial: 'messages/message', collection: @stream.messages, locals: { stream_name: @stream.name } %>
   </div>
 </div>
