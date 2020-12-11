@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :user_stream do
+    user
+    stream
+  end
+
   factory :stream do
     
   end
